@@ -1,0 +1,19 @@
+# SkyWeather2 configuration service
+# /lib/systemd/system
+# sudo systemctl enable skyconfig.service
+# sudo systemctl start skyconfig.service
+# sudo systemctl status skyconfig.service
+
+[Unit]
+Description=SkyWeather2 Configuration
+After=multi-user.target
+Conflicts=getty@tty1.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/SDL_Pi_SkyWeather2
+ExecStart=/usr/bin/python3 /home/pi/SDL_Pi_SkyWeather2/SkyWeatherConfigure.py
+StandardInput=tty-force
+
+[Install]
+WantedBy=multi-user.target
