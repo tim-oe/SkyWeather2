@@ -1,5 +1,5 @@
 # SkyWeather2
-project to house any tweaks and changes for setting up (SkyWeather2)[https://shop.switchdoc.com/products/skyweather2-raspberry-pi-based-weather-station-kit-for-the-cloud]
+project to house any tweaks and changes for setting up [SkyWeather2](https://shop.switchdoc.com/products/skyweather2-raspberry-pi-based-weather-station-kit-for-the-cloud)
 
 ## Current setup
 
@@ -24,11 +24,12 @@ project to house any tweaks and changes for setting up (SkyWeather2)[https://sho
 ## steps
 - install pi os
 - enable [ssh](https://www.raspberrypi.org/documentation/remote-access/ssh/)
-- from [manual](https://www.switchdoc.com/wp-content/uploads/2020/12/SkyWeather2AssemblyAndTestManual1.2.pdf)
+- follow [manual](https://www.switchdoc.com/wp-content/uploads/2020/12/SkyWeather2AssemblyAndTestManual1.2.pdf)
+- utilize [init.sh](https://github.com/tim-oe/SkyWeather2/blob/main/src/bin/init.sh) for software setup
+    - you can use it as a guide for each step 
 
 ## TODOs
 
-- add network storage
 - add seconday local storage, ssd
 - make specific db user for Skyweather schema
 - etl process to export data

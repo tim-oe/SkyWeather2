@@ -2,10 +2,16 @@
 # init script to add system and python deps for SkyWeather2
 # requires that wifi is setup
 # ssh enabled to make things easier
+# ssh enabled only for key auth
 
 # add dependent libraries 
 sudo apt update
 sudo apt upgrade
+
+# remove since key is only auth used. 
+# https://raspberrypi.stackexchange.com/questions/58732/remove-ssh-warning-about-default-password
+sudo apt purge libpam-chksshpwd
+
 # https://github.com/switchdoclabs/rtl_433/blob/master/README.md
 # git and pip not packaged with lite
 sudo apt install libtool libusb-1.0-0-dev librtlsdr-dev rtl-sdr build-essential autoconf cmake pkg-config mariadb-server python3-pip git
