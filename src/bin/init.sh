@@ -15,8 +15,14 @@ sudo apt purge libpam-chksshpwd
 # https://github.com/switchdoclabs/rtl_433/blob/master/README.md
 # git and pip not packaged with lite
 sudo apt install libtool libusb-1.0-0-dev librtlsdr-dev rtl-sdr build-essential autoconf cmake pkg-config mariadb-server python3-pip git 
+
 # camera deps
 sudo apt install python3-rpi.gpio libopenjp2-7-dev libtiff-dev
+
+# dash deps, install with apt and not pip for version compatability 
+# https://numpy.org/devdocs/user/troubleshooting-importerror.html
+# https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html#install
+sudo apt install python3-numpy python3-pandas
 
 # MQTT
 # https://pimylifeup.com/raspberry-pi-mosquitto-mqtt-server/
@@ -34,6 +40,8 @@ sudo systemctl restart mysql
 sudo python3 -m pip install apscheduler remi mysqlclient future i2cdevice 
 # camera deps
 sudo python3 -m pip install picamera pillow
+# dash deps
+sudo python3 -m pip install dash dash-bootstrap-components dash_daq psutil 
 
 # switchdoclabs software defined radio data reciever
 git clone https://github.com/switchdoclabs/rtl_433.git
