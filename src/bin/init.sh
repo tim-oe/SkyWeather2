@@ -14,7 +14,13 @@ sudo apt purge libpam-chksshpwd
 
 # https://github.com/switchdoclabs/rtl_433/blob/master/README.md
 # git and pip not packaged with lite
-sudo apt install libtool libusb-1.0-0-dev librtlsdr-dev rtl-sdr build-essential autoconf cmake pkg-config mariadb-server python3-pip git
+sudo apt install libtool libusb-1.0-0-dev librtlsdr-dev rtl-sdr build-essential autoconf cmake pkg-config mariadb-server python3-pip git 
+# camera deps
+sudo apt install python3-rpi.gpio libopenjp2-7-dev libtiff-dev
+
+# MQTT
+# https://pimylifeup.com/raspberry-pi-mosquitto-mqtt-server/
+sudo apt install mosquitto mosquitto-clients
 
 # setup mariadb
 # TODO the SkyWeather app looks to use root to access the db
@@ -25,7 +31,9 @@ sudo bash -c 'sed -i "s/^bind-address.*\$/bind-address=0.0.0.0/g" /etc/mysql/mar
 sudo systemctl restart mysql
 
 # add python libraries
-sudo python3 -m pip install apscheduler remi mysqlclient future i2cdevice
+sudo python3 -m pip install apscheduler remi mysqlclient future i2cdevice 
+# camera deps
+sudo python3 -m pip install picamera pillow
 
 # switchdoclabs software defined radio data reciever
 git clone https://github.com/switchdoclabs/rtl_433.git
@@ -47,6 +55,9 @@ git clone https://github.com/switchdoclabs/SDL_Pi_SkyWeather2.git
 # load sql
 sudo mysql -u root -p < WeatherSenseWireless.sql
 
+# make sure to enable camera
+sudo raspi-config
+
 # start config app
 # use browser to config
 cd SDL_Pi_SkyWeather2
@@ -54,3 +65,6 @@ python3 SkyWeatherConfigure.py
 
 # test sensors
 sudo python3 testWirelessSensors.py
+
+# test camera
+sudo python3 testSkyCamera.py

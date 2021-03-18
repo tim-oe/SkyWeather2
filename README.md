@@ -5,13 +5,12 @@ project to house any tweaks and changes for setting up [SkyWeather2](https://sho
 
 - Raspberry Pi 4 Model B Rev 1.4
     - 8g memory
-    - cat /proc/device-tree/model
 - Raspbian GNU/Linux 10 buster
     - [Raspberry Pi OS Lite](https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2021-01-12/2021-01-11-raspios-buster-armhf-lite.zip)
-    - cat /etc/os-release
 - Python 3.7.3
 - 10.3.27-MariaDB-0+deb10u1
 - 64g sd card
+- 38.8940100°, -90.192002°, 644.6 ft MSL
 
 ## utility init script
 
@@ -33,3 +32,4 @@ project to house any tweaks and changes for setting up [SkyWeather2](https://sho
 - add seconday local storage, ssd
 - make specific db user for Skyweather schema
 - etl process to export data
+- implement MQTT
