@@ -1,6 +1,8 @@
 # SkyWeather2
 project to house any tweaks and changes for setting up [SkyWeather2](https://shop.switchdoc.com/products/skyweather2-raspberry-pi-based-weather-station-kit-for-the-cloud)
 
+![Complete weather station](https://github.com/tim-oe/SkyWeather2/blob/main/img/porch-wiew.jpg?raw=true)
+
 ## Current setup
 
 - [Raspberry Pi 4 Model B Rev 1.4](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/)
