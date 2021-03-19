@@ -1,7 +1,7 @@
 #!/bin/bash
 # init script to add system and python deps for SkyWeather2
 # use sudo raspi-config
-# enable I2C, wifi, ssh
+# enable wifi, ssh
 # requires that wifi is setup
 # ssh enabled to make things easier
 # ssh enabled only for key auth
@@ -26,7 +26,7 @@ sudo apt install build-essential autoconf cmake
 sudo apt install pkg-config mariadb-server python3-pip git
 
 # camera deps
-sudo apt install python3-rpi.gpio libopenjp2-7-dev libtiff-dev
+sudo apt install python3-rpi.gpio libopenjp2-7-dev libtiff-dev fonts-freefont-ttf
 
 # dash deps, install with apt and not pip for version compatability 
 # https://numpy.org/devdocs/user/troubleshooting-importerror.html
@@ -72,7 +72,7 @@ git clone https://github.com/switchdoclabs/SDL_Pi_SkyWeather2.git
 # load sql
 sudo mysql -u root -p < WeatherSenseWireless.sql
 
-# make sure to enable camera
+# make sure to enable camera and I2C module
 sudo raspi-config
 
 # start config app
@@ -80,8 +80,8 @@ sudo raspi-config
 cd SDL_Pi_SkyWeather2
 python3 SkyWeatherConfigure.py
 
+# test camera make sure no errors
+sudo python3 testSkyCamera.py
+
 # test sensors
 sudo python3 testWirelessSensors.py
-
-# test camera
-sudo python3 testSkyCamera.py

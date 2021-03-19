@@ -1,0 +1,19 @@
+# SkyWeather2 dashboard service
+# /lib/systemd/system
+# sudo systemctl enable skydash.service
+# sudo systemctl start skydash.service
+# sudo systemctl status skydash.service
+
+[Unit]
+Description=SkyWeather2 dashboard application
+After=multi-user.target
+Conflicts=getty@tty1.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/SDL_Pi_SkyWeather2/dash_app
+ExecStart=/usr/bin/python3 /home/pi/SDL_Pi_SkyWeather2/dash_app/index.py
+StandardInput=tty-force
+
+[Install]
+WantedBy=multi-user.target

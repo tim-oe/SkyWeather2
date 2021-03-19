@@ -28,8 +28,16 @@ project to house any tweaks and changes for setting up [SkyWeather2](https://sho
     - you can use it as a guide for each step 
 - [configure and operate](https://www.switchdoc.com/wp-content/uploads/2020/12/SkyWeather2ConfigurationAndOperationsManual1.1.pdf)
 
+## [System Services](https://wiki.debian.org/systemd/documentation)
+- [Configuration Service](https://github.com/tim-oe/SkyWeather2/blob/main/src/lib/systemd/system/skyconfig.service)
+- [skyWeather2 Service](https://github.com/tim-oe/SkyWeather2/blob/main/src/lib/systemd/system/skyweather.service)
+- [Dashboard Service](https://github.com/tim-oe/SkyWeather2/blob/main/src/lib/systemd/system/skydash.service)
+
 ## BOM
 - [enclosure](https://www.amazon.com/gp/product/B0828387BM/ref=ppx_yo_dt_b_asin_title_o03_s01?ie=UTF8&psc=1)
+
+## FAQ
+- [verify camera](https://www.raspberrypi.org/forums/viewtopic.php?t=209221)
 
 ## TODOs
 
