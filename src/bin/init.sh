@@ -1,5 +1,7 @@
 #!/bin/bash
 # init script to add system and python deps for SkyWeather2
+# use sudo raspi-config
+# enable I2C, wifi, ssh
 # requires that wifi is setup
 # ssh enabled to make things easier
 # ssh enabled only for key auth
@@ -13,8 +15,15 @@ sudo apt upgrade
 sudo apt purge libpam-chksshpwd
 
 # https://github.com/switchdoclabs/rtl_433/blob/master/README.md
-# git and pip not packaged with lite
-sudo apt install libtool libusb-1.0-0-dev librtlsdr-dev rtl-sdr build-essential autoconf cmake pkg-config mariadb-server python3-pip git 
+# https://skpang.co.uk/blog/archives/575
+# additional driver deps
+sudo apt install libusb-1.0-0-dev librtlsdr-dev rtl-sdr libtool i2c-tools pigpio
+
+# build tools
+sudo apt install build-essential autoconf cmake 
+
+# skyWeather deps
+sudo apt install pkg-config mariadb-server python3-pip git
 
 # camera deps
 sudo apt install python3-rpi.gpio libopenjp2-7-dev libtiff-dev
@@ -37,7 +46,7 @@ sudo bash -c 'sed -i "s/^bind-address.*\$/bind-address=0.0.0.0/g" /etc/mysql/mar
 sudo systemctl restart mysql
 
 # add python libraries
-sudo python3 -m pip install apscheduler remi mysqlclient future i2cdevice 
+sudo python3 -m pip install apscheduler remi mysqlclient future i2cdevice gpiozero pigpio smbus paho-mqtt
 # camera deps
 sudo python3 -m pip install picamera pillow
 # dash deps
