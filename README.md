@@ -1,7 +1,15 @@
 # SkyWeather2
 project to house any tweaks and changes for setting up [SkyWeather2](https://shop.switchdoc.com/products/skyweather2-raspberry-pi-based-weather-station-kit-for-the-cloud)
 
-![Complete weather station](https://github.com/tim-oe/SkyWeather2/blob/main/img/porch-wiew.jpg?raw=true)
+![Complete weather station](tim-oe.github.com/SkyWeather2/blob/main/img/porch-wiew.jpg?raw=true)
+
+![Stand](tim-oe.github.com/SkyWeather2/blob/main/img/stand.jpg?raw=true)
+
+![mountings](tim-oe.github.com/SkyWeather2/blob/main/img/mountings.jpg?raw=true)
+
+![pi enclosure](tim-oe.github.com/SkyWeather2/blob/main/img/pi-enclosure.jpg?raw=true)
+
+![power enclosure](tim-oe.github.com/SkyWeather2/blob/main/img/power-enclosure.jpg?raw=true)
 
 ## Current setup
 
