@@ -42,10 +42,6 @@ project to house any findings, tweaks, and changes for setting up [SkyWeather2](
 - [configure and operate](https://www.switchdoc.com/wp-content/uploads/2020/12/SkyWeather2ConfigurationAndOperationsManual1.1.pdf)
 - [set up services](src/lib/systemd/system)
 
-## [System Services](https://wiki.debian.org/systemd/documentation)
-- [Configuration Service](https://github.com/tim-oe/SkyWeather2/blob/main/src/lib/systemd/system/skyconfig.service)
-- [skyWeather2 Service](https://github.com/tim-oe/SkyWeather2/blob/main/src/lib/systemd/system/skyweather.service)
-- [Dashboard Service](https://github.com/tim-oe/SkyWeather2/blob/main/src/lib/systemd/system/skydash.service)
 
 ## BOM
 - [pi enclosure](https://www.amazon.com/gp/product/B0828387BM/ref=ppx_yo_dt_b_asin_title_o03_s01?ie=UTF8&psc=1)
@@ -62,7 +58,8 @@ project to house any findings, tweaks, and changes for setting up [SkyWeather2](
     - [pressure treated deck board (power mount)](https://www.homedepot.com/p/WeatherShield-5-4-in-x-6-in-x-8-ft-Pressure-Treated-Pine-Standard-Decking-Board-5310253/100014758)
     - [pressure treated 2x8 (base)](https://www.homedepot.com/p/2-in-x-8-in-x-8-ft-2-Prime-Ground-Contact-Pressure-Treated-Lumber-107523/206937455)
 - [3/4in copper bell pipe hanger x 4](https://www.homedepot.com/p/Oatey-1-2-in-Copper-Bell-Pipe-Hanger-33502/301505456)
-  
+- miscellanies screws...  
+
 ## FAQ
 - [verify camera](https://www.raspberrypi.org/forums/viewtopic.php?t=209221)
 
@@ -72,6 +69,6 @@ project to house any findings, tweaks, and changes for setting up [SkyWeather2](
 - make specific db user for Skyweather schema
 - implement MQTT 
 - add [air quality sensor](https://shop.switchdoc.com/collections/shop-all/products/grove-laser-pm2-5-air-quality-sensor-for-raspberry-pi-arduino-hm3301)
-- add [lightening sensor](https://shop.switchdoc.com/collections/shop-all/products/the-thunder-board-i2c-lightning-detector-grove-connectors)
+- add [Lightning sensor](https://shop.switchdoc.com/collections/shop-all/products/the-thunder-board-i2c-lightning-detector-grove-connectors)
 - add [SolarMax](https://shop.switchdoc.com/products/solarmax-lipo-solar-power-system-and-data-gathering-system-for-skyweather-and-others)
 - add gps?
