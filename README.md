@@ -1,6 +1,8 @@
 # SkyWeather2
 project to house any findings, tweaks, and changes for setting up [SkyWeather2](https://shop.switchdoc.com/products/skyweather2-raspberry-pi-based-weather-station-kit-for-the-cloud)
 
+[WeatherSTEM Page](https://skyweather.weatherstem.com/tec-weather1)
+
 ![Complete weather station](img/porch-wiew.jpg?raw=true)
 
 ![Stand](img/stand.jpg?raw=true)
@@ -62,6 +64,9 @@ project to house any findings, tweaks, and changes for setting up [SkyWeather2](
 
 ## FAQ
 - [verify camera](https://www.raspberrypi.org/forums/viewtopic.php?t=209221)
+- [remote dev VSCode](https://electrobotify.wordpress.com/2019/08/16/remote-development-on-raspberry-pi-with-vs-code/)
+    - [ssh-agent](https://serverfault.com/questions/672346/straight-forward-way-to-run-ssh-agent-and-ssh-add-on-login-via-ssh)
+    - code placed in .profile
 
 ## TODOs
 
