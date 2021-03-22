@@ -12,7 +12,6 @@ project to house any findings, tweaks, and changes for setting up [SkyWeather2](
 ![power enclosure](img/power-enclosure.jpg?raw=true)
 
 ## Current setup
-
 - [Raspberry Pi 4 Model B Rev 1.4](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/)
     - 8g memory
 - Raspbian GNU/Linux 10 buster
@@ -23,11 +22,9 @@ project to house any findings, tweaks, and changes for setting up [SkyWeather2](
 - 38.8940100°, -90.192002°, 644.6 ft MSL
 
 ## utility init script
-
 [init.sh](https://github.com/tim-oe/SkyWeather2/blob/main/src/bin/init.sh) contains commands ran to initialize the dependent software
 
 ## sql init script
-
 [init.sql](https://github.com/tim-oe/SkyWeather2/blob/main/src/sql/init.sql) contains sql commands to init mariadb
 
 ## steps
@@ -41,7 +38,6 @@ project to house any findings, tweaks, and changes for setting up [SkyWeather2](
     - you can use it as a guide for each step 
 - [configure and operate](https://www.switchdoc.com/wp-content/uploads/2020/12/SkyWeather2ConfigurationAndOperationsManual1.1.pdf)
 - [set up services](src/lib/systemd/system)
-
 
 ## BOM
 - [pi enclosure](https://www.amazon.com/gp/product/B0828387BM/ref=ppx_yo_dt_b_asin_title_o03_s01?ie=UTF8&psc=1)
@@ -62,9 +58,9 @@ project to house any findings, tweaks, and changes for setting up [SkyWeather2](
 
 ## FAQ
 - [verify camera](https://www.raspberrypi.org/forums/viewtopic.php?t=209221)
+- [sync to forked repo](https://stackoverflow.com/questions/7244321/how-do-i-update-a-github-forked-repository)
 
 ## TODOs
-
 - add seconday local storage, ssd
 - make specific db user for Skyweather schema
 - implement MQTT 
