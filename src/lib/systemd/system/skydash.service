@@ -6,7 +6,7 @@
 
 [Unit]
 Description=SkyWeather2 dashboard application
-After=multi-user.target
+After=multi-user.target skyweather.service
 Conflicts=getty@tty1.service
 
 [Service]
@@ -14,6 +14,9 @@ Type=simple
 WorkingDirectory=/home/pi/SDL_Pi_SkyWeather2/dash_app
 ExecStart=/usr/bin/python3 /home/pi/SDL_Pi_SkyWeather2/dash_app/index.py
 StandardInput=tty-force
+StandardOutput=file:/var/log/skydash.log
+StandardError=file:/var/log/skydash_err.log
+Restart=always
 
 [Install]
 WantedBy=multi-user.target

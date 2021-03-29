@@ -60,15 +60,16 @@ project to house any findings, tweaks, and changes for setting up [SkyWeather2](
 
 ## FAQ
 - [verify camera](https://www.raspberrypi.org/forums/viewtopic.php?t=209221)
+- [adjust camera focus](https://zpjiang.me/2020/05/28/picamera-adjust-focus/)
 - [sync forked repo](https://stackoverflow.com/questions/7244321/how-do-i-update-a-github-forked-repository)
 - [remote dev VSCode](https://electrobotify.wordpress.com/2019/08/16/remote-development-on-raspberry-pi-with-vs-code/)
     - [ssh-agent](https://serverfault.com/questions/672346/straight-forward-way-to-run-ssh-agent-and-ssh-add-on-login-via-ssh)
     - code placed in .profile
 
 ## TODOs
-- add seconday local storage, ssd
-- make specific db user for Skyweather schema
-- implement MQTT 
+- move maria to seondary instance
+- rest controllers for dash and shutdown 
+- [custom pi image](https://kmdouglass.github.io/posts/create-a-custom-raspbian-image-with-pi-gen-part-1/)
 - add [air quality sensor](https://shop.switchdoc.com/collections/shop-all/products/grove-laser-pm2-5-air-quality-sensor-for-raspberry-pi-arduino-hm3301)
 - add [Lightning sensor](https://shop.switchdoc.com/collections/shop-all/products/the-thunder-board-i2c-lightning-detector-grove-connectors)
 - add [SolarMax](https://shop.switchdoc.com/products/solarmax-lipo-solar-power-system-and-data-gathering-system-for-skyweather-and-others)
