@@ -18,6 +18,7 @@ project to house any findings, tweaks, and changes for setting up [SkyWeather2](
     - 8g memory
 - Raspbian GNU/Linux 10 buster
     - [Raspberry Pi OS Lite](https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2021-01-12/2021-01-11-raspios-buster-armhf-lite.zip)
+    - [preloaded image](https://drive.google.com/file/d/1u-FxxrwZTDbI-K6wTv74SKIVL2NMbkmX/view?usp=sharing)
 - Python 3.7.3
 - [10.3.27-MariaDB-0+deb10u1](https://mariadb.com/kb/en/documentation/)
 - 64g sd card
@@ -65,6 +66,10 @@ project to house any findings, tweaks, and changes for setting up [SkyWeather2](
 - [remote dev VSCode](https://electrobotify.wordpress.com/2019/08/16/remote-development-on-raspberry-pi-with-vs-code/)
     - [ssh-agent](https://serverfault.com/questions/672346/straight-forward-way-to-run-ssh-agent-and-ssh-add-on-login-via-ssh)
     - code placed in .profile
+- [disable wifi brutoof](https://thedigitalnomadguy.com/how-to-disable-onboard-wifi-for-raspberry-pi-3/)
+- [fully dsable brutoof](https://scribles.net/disabling-bluetooth-on-raspberry-pi/)
+- [pwa_supplicant troubleshooting](https://bastide.org/2015/04/05/configure-wlan0-on-raspberry-pi/)
+
 
 ## TODOs
 - move maria to seondary instance
