@@ -60,22 +60,26 @@ project to house any findings, tweaks, and changes for setting up [SkyWeather2](
 - miscellanies screws...  
 
 ## FAQ
-- [verify camera](https://www.raspberrypi.org/forums/viewtopic.php?t=209221)
+- [verify camera](https://www.raspberrypi.org/documentation/raspbian/applications/camera.md)
 - [adjust camera focus](https://zpjiang.me/2020/05/28/picamera-adjust-focus/)
 - [sync forked repo](https://stackoverflow.com/questions/7244321/how-do-i-update-a-github-forked-repository)
 - [remote dev VSCode](https://electrobotify.wordpress.com/2019/08/16/remote-development-on-raspberry-pi-with-vs-code/)
     - [ssh-agent](https://serverfault.com/questions/672346/straight-forward-way-to-run-ssh-agent-and-ssh-add-on-login-via-ssh)
     - code placed in .profile
-- [disable wifi brutoof](https://thedigitalnomadguy.com/how-to-disable-onboard-wifi-for-raspberry-pi-3/)
-- [fully dsable brutoof](https://scribles.net/disabling-bluetooth-on-raspberry-pi/)
+- [disable wifi bluetooth](https://raspberrytips.com/disable-wifi-raspberry-pi/)
+- [fully dsable bluetooth](https://scribles.net/disabling-bluetooth-on-raspberry-pi/)
+- [disable sound](http://jheyman.github.io/blog/pages/RaspberryPiTipsAndTricks/#disable-onboard-sound-raspbian-wheezy)
+- [disable unused services](https://plone.lucidsolutions.co.nz/hardware/raspberry-pi/3/disable-unwanted-raspbian-services)
 - [pwa_supplicant troubleshooting](https://bastide.org/2015/04/05/configure-wlan0-on-raspberry-pi/)
-
+- pi hard reboot command `echo s | sudo tee /proc/sysrq-trigger;echo u | sudo tee /proc/sysrq-trigger;echo b | sudo tee /proc/sysrq-trigger`
+- [enable pgio svc](https://raspberrypi.stackexchange.com/questions/70568/how-to-run-pigpiod-on-boot)
+- [pi version](https://www.raspberrypi-spy.co.uk/2012/09/checking-your-raspberry-pi-board-version/)
 
 ## TODOs
-- move maria to seondary instance
+- move maria to secondary instance
 - rest controllers for dash and shutdown 
 - [custom pi image](https://kmdouglass.github.io/posts/create-a-custom-raspbian-image-with-pi-gen-part-1/)
 - add [air quality sensor](https://shop.switchdoc.com/collections/shop-all/products/grove-laser-pm2-5-air-quality-sensor-for-raspberry-pi-arduino-hm3301)
 - add [Lightning sensor](https://shop.switchdoc.com/collections/shop-all/products/the-thunder-board-i2c-lightning-detector-grove-connectors)
-- add [SolarMax](https://shop.switchdoc.com/products/solarmax-lipo-solar-power-system-and-data-gathering-system-for-skyweather-and-others)
+- rework network to use eop and power pi with poe
 - add gps?

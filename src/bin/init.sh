@@ -10,9 +10,18 @@
 sudo apt update
 sudo apt upgrade
 
-# remove since key is only auth used. 
+# remove stuff not used. 
 # https://raspberrypi.stackexchange.com/questions/58732/remove-ssh-warning-about-default-password
-sudo apt purge libpam-chksshpwd
+sudo apt purge libpam-chksshpwd vim-tiny vim-common avahi-daemon triggerhappy ed
+sudo apt purge busybox flashrom read-edid
+# wireless
+sudo apt purge wpasupplicant wireless-tools wireless-regdb iw firmware-brcm80211
+# drivers
+sudo apt purge firmware-atheros firmware-libertas firmware-realtek firmware-misc-nonfree
+# blue tooth
+sudo apt purge bluez bluez-firmware
+# any cruft left hanging
+sudo apt autoremove --purge
 
 # https://github.com/switchdoclabs/rtl_433/blob/master/README.md
 # https://skpang.co.uk/blog/archives/575
@@ -20,7 +29,7 @@ sudo apt purge libpam-chksshpwd
 sudo apt install libusb-1.0-0-dev librtlsdr-dev rtl-sdr libtool i2c-tools pigpio
 
 # build tools
-sudo apt install build-essential autoconf cmake 
+sudo apt install build-essential autoconf cmake bc dkms 
 
 # skyWeather deps
 sudo apt install pkg-config mariadb-server python3-pip git
@@ -46,11 +55,25 @@ sudo bash -c 'sed -i "s/^bind-address.*\$/bind-address=0.0.0.0/g" /etc/mysql/mar
 sudo systemctl restart mysql
 
 # add python libraries
-sudo python3 -m pip install apscheduler remi mysqlclient future i2cdevice gpiozero pigpio smbus paho-mqtt
+sudo python3 -m pip install apscheduler remi mysqlclient future i2cdevice gpiozero pigpio smbus
+sudo python3 -m pip install paho-mqtt vcgencmd python-aqi ffmpeg
 # camera deps
 sudo python3 -m pip install picamera pillow
 # dash deps
-sudo python3 -m pip install dash dash-bootstrap-components dash_daq psutil 
+# sudo python3 -m pip install dash dash-bootstrap-components dash_daq psutil 
+# https://forum.switchdoc.com/thread/1890/dash-components-update-crashes-app
+sudo python3 -m pip install dash==1.21.0 dash-bootstrap-components==0.13.0 dash-core-components==1.17.1 dash-daq==0.5.0 dash-html-components==1.1.4 dash-table==4.12.0
+
+# disable unused services
+# https://github.com/wertarbyte/triggerhappy
+sudo systemctl disable triggerhappy.service 
+# https://avahi.org/
+sudo systemctl disable avahi-daemon.service
+# blue tooth
+sudo systemctl disable hciuart
+sudo systemctl disable bluetooth
+# wifi
+sudo systemctl disable wpa_supplicant
 
 # switchdoclabs software defined radio data reciever
 git clone https://github.com/switchdoclabs/rtl_433.git
