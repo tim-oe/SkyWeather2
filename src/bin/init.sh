@@ -1,12 +1,10 @@
 #!/bin/bash
 # init script to add system and python deps for SkyWeather2
 # use sudo raspi-config
-# enable wifi, ssh
-# requires that wifi is setup
+# enable ssh I2C (wifi if needed)
 # ssh enabled to make things easier
-# ssh enabled only for key auth
 
-# add dependent libraries 
+# make sure OS is up to date 
 sudo apt update
 sudo apt upgrade
 
@@ -14,7 +12,7 @@ sudo apt upgrade
 # https://raspberrypi.stackexchange.com/questions/58732/remove-ssh-warning-about-default-password
 sudo apt purge libpam-chksshpwd vim-tiny vim-common avahi-daemon triggerhappy ed
 sudo apt purge busybox flashrom read-edid
-# wireless
+# wireless stuff if not used
 sudo apt purge wpasupplicant wireless-tools wireless-regdb iw firmware-brcm80211
 # drivers
 sudo apt purge firmware-atheros firmware-libertas firmware-realtek firmware-misc-nonfree
@@ -70,10 +68,10 @@ sudo systemctl disable triggerhappy.service
 # https://avahi.org/
 sudo systemctl disable avahi-daemon.service
 # blue tooth
-sudo systemctl disable hciuart
-sudo systemctl disable bluetooth
+sudo systemctl disable hciuart.service
+sudo systemctl disable bluetooth.service
 # wifi
-sudo systemctl disable wpa_supplicant
+sudo systemctl disable wpa_supplicant.service
 
 # switchdoclabs software defined radio data reciever
 git clone https://github.com/switchdoclabs/rtl_433.git
