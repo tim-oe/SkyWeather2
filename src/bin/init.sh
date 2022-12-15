@@ -53,8 +53,9 @@ sudo bash -c 'sed -i "s/^bind-address.*\$/bind-address=0.0.0.0/g" /etc/mysql/mar
 sudo systemctl restart mysql
 
 # add python libraries
-sudo python3 -m pip install apscheduler remi mysqlclient future i2cdevice gpiozero pigpio smbus
-sudo python3 -m pip install paho-mqtt vcgencmd python-aqi ffmpeg
+sudo python3 -m pip install apscheduler remi mysqlclient future i2cdevice gpiozero pigpio 
+sudo python3 -m pip install paho-mqtt vcgencmd python-aqi ffmpeg smbus smbus2
+sudo python3 -m pip install SafecastPy
 # camera deps
 sudo python3 -m pip install picamera pillow
 # dash deps
