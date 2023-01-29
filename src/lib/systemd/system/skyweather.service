@@ -11,11 +11,11 @@ Conflicts=getty@tty1.service
 
 [Service]
 Type=simple
-WorkingDirectory=/home/pi/SDL_Pi_SkyWeather2
-ExecStart=/usr/bin/python3 /home/pi/SDL_Pi_SkyWeather2/SkyWeather2.py
+WorkingDirectory=/home/pi/src/SDL_Pi_SkyWeather2
+ExecStart=/usr/bin/python3 /home/pi/src/SDL_Pi_SkyWeather2/SkyWeather2.py
 StandardInput=tty-force
 StandardOutput=file:/var/log/skyweather2.log
-StandardError=file:/var/log/skyweather2_err.log
+StandardError=file:/var/log/skyweather2.log
 Restart=always
 
 [Install]

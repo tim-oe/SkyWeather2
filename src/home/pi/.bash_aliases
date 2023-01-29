@@ -1,7 +1,9 @@
 alias cls='printf "\033c"'
 alias aptclean='sudo apt autoremove --purge'
-alias osver='cat /etc/os-release'
+alias osver="cat /etc/os-release | egrep -o  PRETTY_NAME=.* | sed -E 's/PRETTY_NAME=\"(.+)\"/\1/'"
 alias piver='cat /proc/device-tree/model;printf "\n"'
+alias pimem="free -mh | egrep -0 Mem:.* | sed -E 's/Mem:\s+([0-9]+\.?[0-9]?[GMi]{2})\s+.*/\1/'"
+alias pidisk="df -h | egrep -0 /dev/root.* | sed -E 's/\/dev\/root\s+([0-9]+[GM]?)\s+([0-9\.]+[GM]?)\s+([0-9\.]+[GM]?).*/disk total:\1 used:\2/'"
 alias pitemp='vcgencmd measure_temp | egrep -o "[0-9]*\.[0-9]*.{2}"'
 alias listsvc='systemctl list-unit-files --type=service'
 alias listenable='systemctl list-unit-files --type=service --state=enabled'

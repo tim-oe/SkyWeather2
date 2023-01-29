@@ -11,9 +11,12 @@ Conflicts=getty@tty1.service
 
 [Service]
 Type=simple
-WorkingDirectory=/home/pi/SDL_Pi_SkyWeather2
-ExecStart=/usr/bin/python3 /home/pi/SDL_Pi_SkyWeather2/SkyWeatherConfigure.py
+WorkingDirectory=/home/pi/src/SDL_Pi_SkyWeather2
+ExecStart=/usr/bin/python3 /home/pi/src/SDL_Pi_SkyWeather2/SkyWeatherConfigure.py
 StandardInput=tty-force
+StandardOutput=file:/var/log/skyconfig.log
+StandardError=file:/var/log/skyconfig.log
+Restart=always
 
 [Install]
 WantedBy=multi-user.target
