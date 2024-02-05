@@ -48,7 +48,7 @@ sudo apt install mosquitto mosquitto-clients
 # TODO the SkyWeather app looks to use root to access the db
 sudo mysql_secure_installation
 
-# i would recommend allowing remote access so you can use better tools like toad to look at db
+# i would recommend allowing remote access so you can use better tools like dbeaver to look at db
 sudo bash -c 'sed -i "s/^bind-address.*\$/bind-address=0.0.0.0/g" /etc/mysql/mariadb.conf.d/50-server.cnf'
 sudo systemctl restart mysql
 
@@ -62,6 +62,7 @@ sudo python3 -m pip install picamera pillow
 # sudo python3 -m pip install dash dash-bootstrap-components dash_daq psutil 
 # https://forum.switchdoc.com/thread/1890/dash-components-update-crashes-app
 sudo python3 -m pip install dash==1.21.0 dash-bootstrap-components==0.13.0 dash-core-components==1.17.1 dash-daq==0.5.0 dash-html-components==1.1.4 dash-table==4.12.0
+sudo python3 -m pip install psutils
 
 # disable unused services
 # https://github.com/wertarbyte/triggerhappy
@@ -92,6 +93,7 @@ cd
 git clone https://github.com/switchdoclabs/SDL_Pi_SkyWeather2.git
 
 # load sql
+sudo mysql -u root -p < SkyWeather2.sql
 sudo mysql -u root -p < WeatherSenseWireless.sql
 
 # make sure to enable camera and I2C module
