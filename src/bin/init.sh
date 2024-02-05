@@ -32,6 +32,9 @@ sudo apt install build-essential autoconf cmake bc dkms
 # skyWeather deps
 sudo apt install pkg-config mariadb-server python3-pip git
 
+# dust sensor
+sudo apt install pigpio python-pigpio python3-pigpio python3-future
+
 # camera deps
 sudo apt install python3-rpi.gpio libopenjp2-7-dev libtiff-dev fonts-freefont-ttf
 
